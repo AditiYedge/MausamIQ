@@ -33,7 +33,7 @@ export const ExplanationCard: React.FC<ExplanationCardProps> = ({
 
   return (
     <div className="card" style={{ padding: '18px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <BookOpen size={18} color="var(--color-brand-primary)" />
           <h3 style={{ margin: 0, fontSize: '16px' }}>{t('section_rules_audit')}</h3>
@@ -91,7 +91,7 @@ export const ExplanationCard: React.FC<ExplanationCardProps> = ({
                     background: '#FFFFFF'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '6px', marginBottom: '6px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span style={{ fontWeight: 700, fontSize: '13px', color: 'var(--color-brand-dark)' }}>{r.rule_id}</span>
                       <RiskBadge category={r.severity} showIcon={false} />

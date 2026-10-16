@@ -61,7 +61,7 @@ export const CropComparisonPage: React.FC = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div className="card" style={{ padding: '20px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Columns size={20} color="var(--color-brand-primary)" />
             <h2 style={{ fontSize: '18px', margin: 0, color: 'var(--color-brand-dark)' }}>
@@ -75,7 +75,7 @@ export const CropComparisonPage: React.FC = () => {
 
         {/* District & Crop Selector Strip */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', marginBottom: '16px' }}>
-          <div style={{ minWidth: '220px' }}>
+          <div style={{ flex: '1 1 220px', minWidth: '180px' }}>
             <label className="form-label">Comparison District</label>
             <select
               className="form-select"
@@ -90,7 +90,7 @@ export const CropComparisonPage: React.FC = () => {
             </select>
           </div>
 
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: '2 1 280px' }}>
             <label className="form-label">Select Crops to Compare (Click to toggle)</label>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
               {crops.map(c => {
@@ -129,7 +129,7 @@ export const CropComparisonPage: React.FC = () => {
         <div className="grid-2">
           {comparisonData.comparisons.map((c: any) => (
             <div key={c.crop_id} className="card" style={{ padding: '20px', borderTop: '4px solid var(--color-brand-primary)' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px', marginBottom: '12px' }}>
                 <div>
                   <h3 style={{ margin: 0, fontSize: '18px', color: 'var(--color-brand-dark)' }}>
                     {c.crop_name}

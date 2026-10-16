@@ -47,8 +47,8 @@ export const DataMethodologyPage: React.FC = () => {
           <Award size={18} color="var(--color-brand-primary)" />
           <span>Authoritative Data Sources Directory</span>
         </h3>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+        <div className="table-responsive">
+          <table style={{ width: '100%', minWidth: '550px', borderCollapse: 'collapse', fontSize: '13px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--color-border)', textAlign: 'left', color: 'var(--color-text-muted)' }}>
                 <th style={{ padding: '10px' }}>Dataset / Indicator</th>
@@ -102,7 +102,7 @@ export const DataMethodologyPage: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           {AGRICULTURAL_GLOSSARY.map((g, idx) => (
             <div key={idx} style={{ padding: '12px 16px', background: 'var(--color-bg-subtle)', borderRadius: '8px' }}>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '4px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 14px', alignItems: 'center', marginBottom: '6px' }}>
                 <strong style={{ color: 'var(--color-brand-dark)', fontSize: '14px' }}>{g.term_en}</strong>
                 <span style={{ color: 'var(--color-brand-primary)', fontWeight: 600, fontSize: '13px' }}>मराठी: {g.term_mr}</span>
                 <span style={{ color: 'var(--color-earth-tan)', fontWeight: 600, fontSize: '13px' }}>हिंदी: {g.term_hi}</span>

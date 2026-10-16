@@ -99,7 +99,7 @@ const MainApp: React.FC = () => {
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '16px', fontSize: '12px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '12px' }}>
             <span style={{ cursor: 'pointer', color: 'var(--color-brand-primary)' }} onClick={() => setIsProvenanceOpen(true)}>
               Data Sources & Provenance
             </span>

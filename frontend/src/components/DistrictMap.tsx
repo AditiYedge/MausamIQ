@@ -97,9 +97,29 @@ export const DistrictMap: React.FC<DistrictMapProps> = ({
 
   }, [districts, selectedDistrictId, viewMode, language]);
 
+  // Handle map resizing smoothly across devices and orientation shifts
+  useEffect(() => {
+    if (viewMode === 'map' && mapInstanceRef.current) {
+      const timer = setTimeout(() => {
+        mapInstanceRef.current?.invalidateSize();
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [viewMode]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.invalidateSize();
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="card" style={{ padding: '16px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '12px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <MapPin size={18} color="var(--color-brand-primary)" />
           <h3 style={{ margin: 0, fontSize: '16px' }}>Maharashtra Agro-Climatic Map</h3>
@@ -156,7 +176,7 @@ export const DistrictMap: React.FC<DistrictMapProps> = ({
         <div>
           <div
             ref={mapContainerRef}
-            style={{ height: '360px', width: '100%', borderRadius: '8px', zIndex: 1 }}
+            className="leaflet-map-wrapper"
           />
           {/* Map Legend */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '10px', fontSize: '11px', color: 'var(--color-text-secondary)' }}>
@@ -179,8 +199,8 @@ export const DistrictMap: React.FC<DistrictMapProps> = ({
           </div>
         </div>
       ) : (
-        <div style={{ maxHeight: '360px', overflowY: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+        <div className="table-responsive" style={{ maxHeight: '360px' }}>
+          <table style={{ width: '100%', minWidth: '400px', borderCollapse: 'collapse', fontSize: '13px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--color-border)', textAlign: 'left', color: 'var(--color-text-muted)' }}>
                 <th style={{ padding: '8px' }}>District</th>

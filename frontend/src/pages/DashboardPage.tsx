@@ -103,7 +103,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigateToWhatIf
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {/* Parameters Selection Card */}
       <div className="card" style={{ padding: '20px', background: '#FFFFFF' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
           <h2 style={{ fontSize: '18px', margin: 0, color: 'var(--color-brand-dark)' }}>
             Agricultural Climate-Risk Assessment Control Panel
           </h2>
@@ -221,7 +221,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigateToWhatIf
         {assessment && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div className="card" style={{ padding: '20px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px', marginBottom: '14px' }}>
                 <div>
                   <h3 style={{ margin: 0, fontSize: '18px', color: 'var(--color-brand-dark)' }}>
                     {assessment.crop.name} — {assessment.district.name}
@@ -240,12 +240,12 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigateToWhatIf
               </div>
 
               {/* Action Buttons Toolbar */}
-              <div style={{ display: 'flex', gap: '10px', marginTop: '14px', paddingTop: '12px', borderTop: '1px solid var(--color-border)' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '14px', paddingTop: '12px', borderTop: '1px solid var(--color-border)' }}>
                 <button
                   type="button"
                   className="btn btn-secondary"
                   onClick={handleExport}
-                  style={{ flex: 1, padding: '7px 12px', fontSize: '13px' }}
+                  style={{ flex: '1 1 140px', padding: '7px 12px', fontSize: '13px' }}
                 >
                   <FileDown size={15} />
                   <span>{t('btn_export_report')}</span>
@@ -256,7 +256,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onNavigateToWhatIf
                     type="button"
                     className="btn btn-secondary"
                     onClick={() => onNavigateToWhatIf(selectedDistrictId, selectedCropId)}
-                    style={{ flex: 1, padding: '7px 12px', fontSize: '13px' }}
+                    style={{ flex: '1 1 140px', padding: '7px 12px', fontSize: '13px' }}
                   >
                     <Sliders size={15} />
                     <span>What-If Lab</span>

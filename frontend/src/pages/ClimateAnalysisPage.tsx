@@ -56,7 +56,7 @@ export const ClimateAnalysisPage: React.FC = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {/* Control Strip */}
       <div className="card" style={{ padding: '16px 20px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <BarChart3 size={20} color="var(--color-brand-primary)" />
             <h2 style={{ fontSize: '18px', margin: 0, color: 'var(--color-brand-dark)' }}>

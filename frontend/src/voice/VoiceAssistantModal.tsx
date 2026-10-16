@@ -152,7 +152,7 @@ export const VoiceAssistantModal: React.FC<VoiceAssistantModalProps> = ({
         {/* Intent Routing Result Box */}
         {intentResult && (
           <div style={{ marginTop: '20px', padding: '16px', background: 'var(--color-bg-subtle)', borderRadius: '8px', border: '1px solid var(--color-border)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '6px', marginBottom: '8px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 700, color: 'var(--color-brand-primary)', textTransform: 'uppercase' }}>
                 <Sparkles size={14} />
                 <span>Intent: {intentResult.intent.replace('_', ' ')}</span>
@@ -170,12 +170,12 @@ export const VoiceAssistantModal: React.FC<VoiceAssistantModalProps> = ({
               )}
             </div>
 
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               <button
                 type="button"
                 className="btn btn-primary"
                 onClick={handleActionExecute}
-                style={{ flex: 1, padding: '8px 12px', fontSize: '13px' }}
+                style={{ flex: '1 1 180px', padding: '8px 12px', fontSize: '13px' }}
               >
                 <span>Execute In Assessment View</span>
                 <ArrowRight size={15} />
@@ -185,7 +185,7 @@ export const VoiceAssistantModal: React.FC<VoiceAssistantModalProps> = ({
                 type="button"
                 className="btn btn-secondary"
                 onClick={() => isPlaying ? stopSpeech() : speak(intentResult.clarification || `Evaluating ${intentResult.entities.crop_id || 'crop'} risk in ${intentResult.entities.district_id || 'district'}`, language)}
-                style={{ padding: '8px 12px', fontSize: '13px' }}
+                style={{ flex: '0 1 auto', padding: '8px 12px', fontSize: '13px' }}
               >
                 {isPlaying ? <Square size={14} /> : <Volume2 size={14} />}
                 <span>{isPlaying ? 'Stop' : 'Read'}</span>

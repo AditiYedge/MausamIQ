@@ -38,7 +38,7 @@ export const SettingsPage: React.FC = () => {
             Select your preferred display language. This changes all menus, tooltips, risk explanations, and speech synthesis voices.
           </p>
 
-          <div style={{ display: 'flex', gap: '12px' }}>
+          <div className="grid-3" style={{ gap: '12px' }}>
             {[
               { code: 'mr', label: 'मराठी (Marathi)', note: 'स्थानिक बोली व कृषी संज्ञा' },
               { code: 'hi', label: 'हिंदी (Hindi)', note: 'मानक हिंदी शब्दावली' },

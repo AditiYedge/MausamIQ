@@ -13,10 +13,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
       {/* Hero Section */}
       <section
+        className="hero-section"
         style={{
           background: 'linear-gradient(135deg, #123321 0%, #1C5233 60%, #2A6E46 100%)',
           borderRadius: '16px',
-          padding: '48px 36px',
+          padding: 'clamp(28px, 5vw, 48px) clamp(18px, 4vw, 36px)',
           color: '#FFFFFF',
           boxShadow: '0 10px 25px -5px rgba(18, 51, 33, 0.3)'
         }}

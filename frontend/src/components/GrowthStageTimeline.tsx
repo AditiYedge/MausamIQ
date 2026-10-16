@@ -39,48 +39,48 @@ export const GrowthStageTimeline: React.FC<GrowthStageTimelineProps> = ({
       </div>
 
       {/* Stepper Progress Bar */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
-        {stages.map((stage, idx) => {
-          const isActive = stage.stage_id === activeStageId;
-          const isPast = daysAfterSowing > stage.end_das;
+      <div className="table-responsive" style={{ margin: '0 0 16px 0', paddingBottom: '4px' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', minWidth: '380px' }}>
+          {stages.map((stage) => {
+            const isActive = stage.stage_id === activeStageId;
+            const isPast = daysAfterSowing > stage.end_das;
 
-          let stepBg = 'var(--color-bg-muted)';
-          let textColor = 'var(--color-text-muted)';
-          if (isActive) {
-            stepBg = 'var(--color-brand-primary)';
-            textColor = '#FFFFFF';
-          } else if (isPast) {
-            stepBg = '#A0AEC0';
-            textColor = '#FFFFFF';
-          }
+            let stepBg = 'var(--color-bg-muted)';
+            if (isActive) {
+              stepBg = 'var(--color-brand-primary)';
+            } else if (isPast) {
+              stepBg = '#A0AEC0';
+            }
 
-          return (
-            <div key={stage.stage_id} style={{ flex: 1, textAlign: 'center' }}>
-              <div
-                style={{
-                  height: '6px',
-                  borderRadius: '3px',
-                  background: stepBg,
-                  marginBottom: '6px',
-                  transition: 'background 0.3s'
-                }}
-              />
-              <div
-                style={{
-                  fontSize: '11px',
-                  fontWeight: isActive ? 700 : 500,
-                  color: isActive ? 'var(--color-brand-primary)' : 'var(--color-text-secondary)',
-                  lineHeight: 1.2
-                }}
-              >
-                {getStageTitle(stage)}
+            return (
+              <div key={stage.stage_id} style={{ flex: 1, minWidth: '85px', textAlign: 'center' }}>
+                <div
+                  style={{
+                    height: '6px',
+                    borderRadius: '3px',
+                    background: stepBg,
+                    marginBottom: '6px',
+                    transition: 'background 0.3s'
+                  }}
+                />
+                <div
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: isActive ? 700 : 500,
+                    color: isActive ? 'var(--color-brand-primary)' : 'var(--color-text-secondary)',
+                    lineHeight: 1.25,
+                    wordBreak: 'break-word'
+                  }}
+                >
+                  {getStageTitle(stage)}
+                </div>
+                <div style={{ fontSize: '10px', color: 'var(--color-text-muted)', marginTop: '2px' }}>
+                  DAS {stage.start_das}–{stage.end_das}
+                </div>
               </div>
-              <div style={{ fontSize: '10px', color: 'var(--color-text-muted)', marginTop: '2px' }}>
-                DAS {stage.start_das}–{stage.end_das}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
       {/* Active Stage Vulnerability Callout */}

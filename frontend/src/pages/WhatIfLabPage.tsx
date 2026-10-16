@@ -70,8 +70,8 @@ export const WhatIfLabPage: React.FC = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {/* Disclaimer Banner */}
-      <div style={{ background: '#FFFBEB', border: '1px solid #FCD34D', borderRadius: '8px', padding: '14px 18px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <AlertTriangle size={22} color="#B7791F" />
+      <div style={{ background: '#FFFBEB', border: '1px solid #FCD34D', borderRadius: '8px', padding: '14px 18px', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+        <AlertTriangle size={22} color="#B7791F" style={{ flexShrink: 0, marginTop: '2px' }} />
         <div>
           <div style={{ fontWeight: 700, color: '#92400E', fontSize: '14px' }}>
             Hypothetical Sensitivity Scenario Laboratory
@@ -84,7 +84,7 @@ export const WhatIfLabPage: React.FC = () => {
 
       {/* Control Levers Card */}
       <div className="card" style={{ padding: '20px' }}>
-        <h3 style={{ fontSize: '17px', margin: '0 0 16px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <h3 style={{ fontSize: '17px', margin: '0 0 16px 0', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
           <Sliders size={18} color="var(--color-brand-primary)" />
           <span>Interactive Climate Perturbation Levers</span>
         </h3>
@@ -226,7 +226,7 @@ export const WhatIfLabPage: React.FC = () => {
         <div className="grid-2">
           {/* Baseline Card */}
           <div className="card" style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '12px' }}>
               <h4 style={{ margin: 0, fontSize: '16px', color: 'var(--color-text-secondary)' }}>
                 1. Empirical Historical Baseline
               </h4>
@@ -264,7 +264,7 @@ export const WhatIfLabPage: React.FC = () => {
 
           {/* Simulated Perturbed Card */}
           <div className="card" style={{ padding: '20px', border: '2px solid var(--color-brand-primary)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '12px' }}>
               <h4 style={{ margin: 0, fontSize: '16px', color: 'var(--color-brand-primary)' }}>
                 2. Perturbed Hypothetical Scenario
               </h4>

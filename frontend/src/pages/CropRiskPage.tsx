@@ -41,7 +41,7 @@ export const CropRiskPage: React.FC = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {/* Crop Selector Card */}
       <div className="card" style={{ padding: '20px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Sprout size={20} color="var(--color-brand-primary)" />
             <h2 style={{ fontSize: '18px', margin: 0, color: 'var(--color-brand-dark)' }}>
@@ -115,7 +115,7 @@ export const CropRiskPage: React.FC = () => {
             <div className="grid-2">
               {selectedCrop.stages.map((stage) => (
                 <div key={stage.stage_id} className="card" style={{ padding: '16px', borderLeft: '4px solid var(--color-brand-primary)' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '6px', marginBottom: '8px' }}>
                     <h4 style={{ fontSize: '15px', margin: 0, color: 'var(--color-brand-dark)' }}>
                       {language === 'mr' ? stage.stage_name_mr : language === 'hi' ? stage.stage_name_hi : stage.stage_name_en}
                     </h4>
@@ -133,7 +133,7 @@ export const CropRiskPage: React.FC = () => {
 
           {/* Versioned Agronomic Rules Registry Table */}
           <div className="card" style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <BookOpen size={18} color="var(--color-brand-primary)" />
                 <h3 style={{ margin: 0, fontSize: '16px' }}>
@@ -161,7 +161,7 @@ export const CropRiskPage: React.FC = () => {
                       background: '#FFFFFF'
                     }}
                   >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '6px', marginBottom: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <span style={{ fontWeight: 700, fontSize: '13px', color: 'var(--color-brand-dark)' }}>{r.rule_id}</span>
                         <RiskBadge category={r.risk_category} showIcon={false} />
