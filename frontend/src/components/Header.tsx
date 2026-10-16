@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mic, Info, Sprout, Menu, X } from 'lucide-react';
+import { Mic, Info, Sprout, Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Language } from '../services/types';
 
@@ -19,6 +19,18 @@ export const Header: React.FC<HeaderProps> = ({
   const { language, setLanguage, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const languages: { code: Language; label: string; short: string }[] = [
+    { code: 'mr', label: 'मराठी', short: 'MR' },
+    { code: 'hi', label: 'हिंदी', short: 'HI' },
+    { code: 'en', label: 'English', short: 'EN' }
+  ];
+
+  const getSettingsLabel = () => {
+    if (language === 'mr') return 'भाषा व सेटिंग्ज';
+    if (language === 'hi') return 'भाषा व सेटिंग्स';
+    return 'Language & Settings';
+  };
+
   const navItems = [
     { id: 'overview', label: t('nav_home') },
     { id: 'dashboard', label: t('nav_dashboard') },
@@ -27,7 +39,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'whatif', label: t('nav_what_if') },
     { id: 'compare', label: t('nav_compare') },
     { id: 'methodology', label: t('nav_methodology') },
-    { id: 'settings', label: t('nav_settings') }
+    { id: 'settings', label: getSettingsLabel() }
   ];
 
   const handleNavClick = (id: string) => {
@@ -77,6 +89,26 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Action Controls */}
         <div className="header-actions">
+          {/* Prominent Navbar Language Segmented Toggle */}
+          <div className="navbar-lang-group" title="Select Platform Language / भाषा निवडा">
+            <div className="navbar-lang-label">
+              <Globe size={14} />
+              <span className="lang-text-desktop">भाषा:</span>
+            </div>
+            {languages.map((l) => (
+              <button
+                key={l.code}
+                type="button"
+                className={`navbar-lang-pill ${language === l.code ? 'active' : ''}`}
+                onClick={() => setLanguage(l.code)}
+                aria-label={`Change language to ${l.label}`}
+              >
+                <span className="lang-full-name">{l.label}</span>
+                <span className="lang-short-name">{l.short}</span>
+              </button>
+            ))}
+          </div>
+
           {/* Vernacular Voice Assistant Button */}
           <button
             type="button"
@@ -97,24 +129,35 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Info size={16} />
           </button>
-
-          {/* Language Switcher Dropdown */}
-          <select
-            className="lang-select"
-            value={language}
-            onChange={(e) => setLanguage(e.target.value as Language)}
-            aria-label="Interface Language"
-          >
-            <option value="mr">मराठी</option>
-            <option value="hi">हिंदी</option>
-            <option value="en">English</option>
-          </select>
         </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div className="mobile-nav-drawer">
+          {/* Mobile Drawer Dedicated Language Switcher */}
+          <div className="mobile-drawer-lang-section">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 700, color: 'var(--color-brand-primary)', marginBottom: '8px' }}>
+              <Globe size={15} />
+              <span>भाषा निवडा / भाषा चुनें / Select Language:</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  type="button"
+                  onClick={() => {
+                    setLanguage(l.code);
+                  }}
+                  className={`mobile-lang-btn ${language === l.code ? 'active' : ''}`}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Links */}
           <nav className="mobile-nav-list">
             {navItems.map((item) => (
               <button
