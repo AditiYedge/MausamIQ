@@ -25,12 +25,6 @@ export const Header: React.FC<HeaderProps> = ({
     { code: 'en', label: 'English', short: 'EN' }
   ];
 
-  const getSettingsLabel = () => {
-    if (language === 'mr') return 'भाषा व सेटिंग्ज';
-    if (language === 'hi') return 'भाषा व सेटिंग्स';
-    return 'Language & Settings';
-  };
-
   const navItems = [
     { id: 'overview', label: t('nav_home') },
     { id: 'dashboard', label: t('nav_dashboard') },
@@ -39,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'whatif', label: t('nav_what_if') },
     { id: 'compare', label: t('nav_compare') },
     { id: 'methodology', label: t('nav_methodology') },
-    { id: 'settings', label: getSettingsLabel() }
+    { id: 'settings', label: t('nav_settings') }
   ];
 
   const handleNavClick = (id: string) => {
@@ -51,20 +45,20 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="site-header">
       <div className="header-inner">
         {/* Left: Mobile Menu Toggle & Brand */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
           <button
             type="button"
             className="mobile-menu-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
           {/* Brand Identity */}
           <div className="brand-logo" onClick={() => handleNavClick('overview')}>
             <div className="brand-icon-box">
-              <Sprout size={20} />
+              <Sprout size={18} />
             </div>
             <div className="brand-title">
               <span>MausamIQ</span>
@@ -91,10 +85,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="header-actions">
           {/* Prominent Navbar Language Segmented Toggle */}
           <div className="navbar-lang-group" title="Select Platform Language / भाषा निवडा">
-            <div className="navbar-lang-label">
+            <span className="navbar-lang-icon">
               <Globe size={14} />
-              <span className="lang-text-desktop">भाषा:</span>
-            </div>
+            </span>
             {languages.map((l) => (
               <button
                 key={l.code}
@@ -116,16 +109,19 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={onOpenVoice}
             title={t('btn_voice_assistant')}
           >
-            <Mic size={16} />
-            <span className="voice-btn-text">{t('btn_voice_assistant')}</span>
+            <Mic size={15} />
+            <span className="voice-btn-text">
+              {language === 'mr' ? 'ध्वनी' : language === 'hi' ? 'आवाज़' : 'Voice'}
+            </span>
           </button>
 
           {/* Data Provenance Modal Trigger */}
           <button
             type="button"
-            className="btn btn-secondary header-info-btn"
+            className="header-info-btn"
             onClick={onOpenProvenance}
             title="Inspect Data Sources & Integrity"
+            aria-label="Inspect Data Sources & Integrity"
           >
             <Info size={16} />
           </button>
