@@ -1,0 +1,439 @@
+[
+  {
+    "crop_id": "soybean",
+    "common_name_en": "Soybean",
+    "common_name_mr": "सोयाबीन",
+    "common_name_hi": "सोयाबीन",
+    "botanical_name": "Glycine max",
+    "crop_group": "Oilseeds / Legumes",
+    "primary_season": "kharif",
+    "water_requirement_mm": "450 - 650",
+    "optimal_temp_c": "25 - 32",
+    "total_duration_days": 100,
+    "stages": [
+      {
+        "stage_id": "sowing_emergence",
+        "stage_name_en": "Sowing & Emergence",
+        "stage_name_mr": "पेरणी आणि उगवण",
+        "stage_name_hi": "बुवाई एवं अंकुरण",
+        "start_das": 0,
+        "end_das": 15,
+        "vulnerability": "Sensitive to waterlogging and soil crusting; requires 75-100mm initial soaking rain."
+      },
+      {
+        "stage_id": "vegetative",
+        "stage_name_en": "Vegetative Growth",
+        "stage_name_mr": "शाकीय वाढ",
+        "stage_name_hi": "वानस्पतिक वृद्धि",
+        "start_das": 16,
+        "end_das": 45,
+        "vulnerability": "Tolerates mild dry spells; requires adequate weed management."
+      },
+      {
+        "stage_id": "flowering_podding",
+        "stage_name_en": "Flowering & Pod Formation",
+        "stage_name_mr": "फुलधारणा आणि शेंगा भरणे",
+        "stage_name_hi": "पुष्पन एवं फली निर्माण",
+        "start_das": 46,
+        "end_das": 80,
+        "vulnerability": "Critical moisture-sensitive phase. Dry spell > 10 days causes flower and pod drop."
+      },
+      {
+        "stage_id": "maturity",
+        "stage_name_en": "Pod Ripening & Maturity",
+        "stage_name_mr": "पक्वता आणि काढणी",
+        "stage_name_hi": "परिपक्वता एवं कटाई",
+        "start_das": 81,
+        "end_das": 105,
+        "vulnerability": "Excess late rainfall causes pod shattering, grain discoloration, and fungal rotting."
+      }
+    ]
+  },
+  {
+    "crop_id": "cotton",
+    "common_name_en": "Cotton",
+    "common_name_mr": "कापूस",
+    "common_name_hi": "कपास",
+    "botanical_name": "Gossypium hirsutum",
+    "crop_group": "Fiber Crop",
+    "primary_season": "kharif",
+    "water_requirement_mm": "700 - 1200",
+    "optimal_temp_c": "28 - 35",
+    "total_duration_days": 165,
+    "stages": [
+      {
+        "stage_id": "sowing_seedling",
+        "stage_name_en": "Sowing & Seedling Establishment",
+        "stage_name_mr": "पेरणी आणि रोपावस्था",
+        "stage_name_hi": "बुवाई एवं पौध स्थापना",
+        "start_das": 0,
+        "end_das": 25,
+        "vulnerability": "Deep root establishment; highly sensitive to poor drainage and water stagnation."
+      },
+      {
+        "stage_id": "square_formation",
+        "stage_name_en": "Square Formation & Vegetative",
+        "stage_name_mr": "पात्या लागणे आणि वाढ",
+        "stage_name_hi": "कली निर्माण एवं वानस्पतिक",
+        "start_das": 26,
+        "end_das": 65,
+        "vulnerability": "Moisture deficit halts sympodial branch development."
+      },
+      {
+        "stage_id": "flowering_boll_dev",
+        "stage_name_en": "Flowering & Boll Development",
+        "stage_name_mr": "फुलधारणा आणि बोंड विकास",
+        "stage_name_hi": "पुष्पन एवं गूलर विकास",
+        "start_das": 66,
+        "end_das": 120,
+        "vulnerability": "High water demand. Prolonged dry spells cause square/boll shedding; cloudy weather spikes pest incidence."
+      },
+      {
+        "stage_id": "boll_bursting_picking",
+        "stage_name_en": "Boll Bursting & Harvesting",
+        "stage_name_mr": "बोंडे फुटणे आणि वेचणी",
+        "stage_name_hi": "कपास चुनाई",
+        "start_das": 121,
+        "end_das": 170,
+        "vulnerability": "Requires sunny, dry conditions. Heavy rain discolors lint and degrades fiber grade."
+      }
+    ]
+  },
+  {
+    "crop_id": "rice",
+    "common_name_en": "Rice (Paddy)",
+    "common_name_mr": "भात (धान)",
+    "common_name_hi": "चावल (धान)",
+    "botanical_name": "Oryza sativa",
+    "crop_group": "Cereal",
+    "primary_season": "kharif",
+    "water_requirement_mm": "1100 - 1500",
+    "optimal_temp_c": "24 - 34",
+    "total_duration_days": 125,
+    "stages": [
+      {
+        "stage_id": "nursery_transplanting",
+        "stage_name_en": "Nursery & Transplanting",
+        "stage_name_mr": "रोपवाटिका आणि पुनर्लागवड",
+        "stage_name_hi": "पौधशाला एवं रोपाई",
+        "start_das": 0,
+        "end_das": 25,
+        "vulnerability": "Requires continuous standing water of 2-5 cm."
+      },
+      {
+        "stage_id": "tillering",
+        "stage_name_en": "Active Tillering",
+        "stage_name_mr": "फुटवे फुटणे",
+        "stage_name_hi": "कल्ले फूटना",
+        "start_das": 26,
+        "end_das": 55,
+        "vulnerability": "Moisture stress drastically reduces productive panicle numbers."
+      },
+      {
+        "stage_id": "panicle_flowering",
+        "stage_name_en": "Panicle Initiation & Flowering",
+        "stage_name_mr": "लोंबी बाहेर पडणे आणि फुलोरा",
+        "stage_name_hi": "बाली निकलना एवं पुष्पन",
+        "start_das": 56,
+        "end_das": 90,
+        "vulnerability": "Most sensitive stage. Drought causes spikelet sterility."
+      },
+      {
+        "stage_id": "grain_filling_maturity",
+        "stage_name_en": "Grain Filling & Maturity",
+        "stage_name_mr": "दाणे भरणे आणि कापणी",
+        "stage_name_hi": "दाना भराव एवं कटाई",
+        "start_das": 91,
+        "end_das": 130,
+        "vulnerability": "Cyclonic rain or lodging at maturity causes grain shattering and germination in panicle."
+      }
+    ]
+  },
+  {
+    "crop_id": "jowar",
+    "common_name_en": "Jowar (Sorghum)",
+    "common_name_mr": "ज्वारी",
+    "common_name_hi": "ज्वार",
+    "botanical_name": "Sorghum bicolor",
+    "crop_group": "Millet / Cereal",
+    "primary_season": "kharif_rabi",
+    "water_requirement_mm": "350 - 500",
+    "optimal_temp_c": "26 - 32",
+    "total_duration_days": 110,
+    "stages": [
+      {
+        "stage_id": "emergence_seedling",
+        "stage_name_en": "Emergence & Early Growth",
+        "stage_name_mr": "उगवण आणि प्राथमिक वाढ",
+        "stage_name_hi": "अंकुरण एवं प्रारंभिक वृद्धि",
+        "start_das": 0,
+        "end_das": 25,
+        "vulnerability": "Deep root adaptation; drought hardy but seedling shoot fly vulnerable."
+      },
+      {
+        "stage_id": "booting_flowering",
+        "stage_name_en": "Booting & Flowering",
+        "stage_name_mr": "पोटरी अवस्था आणि फुलोरा",
+        "stage_name_hi": "गोभ अवस्था एवं पुष्पन",
+        "start_das": 50,
+        "end_das": 75,
+        "vulnerability": "Critical moisture stress window; affects grain number per panicle."
+      },
+      {
+        "stage_id": "grain_maturity",
+        "stage_name_en": "Dough & Maturity",
+        "stage_name_mr": "दाणे भरणे आणि पक्वता",
+        "stage_name_hi": "दाना भराव एवं पक्वता",
+        "start_das": 76,
+        "end_das": 115,
+        "vulnerability": "Late unseasonal rains cause grain mold and deterioration of fodder quality."
+      }
+    ]
+  },
+  {
+    "crop_id": "bajra",
+    "common_name_en": "Bajra (Pearl Millet)",
+    "common_name_mr": "बाजरी",
+    "common_name_hi": "बाजरा",
+    "botanical_name": "Pennisetum glaucum",
+    "crop_group": "Millet / Cereal",
+    "primary_season": "kharif",
+    "water_requirement_mm": "250 - 400",
+    "optimal_temp_c": "28 - 36",
+    "total_duration_days": 85,
+    "stages": [
+      {
+        "stage_id": "seedling",
+        "stage_name_en": "Seedling Establishment",
+        "stage_name_mr": "रोपावस्था",
+        "stage_name_hi": "पौध अवस्था",
+        "start_das": 0,
+        "end_das": 20,
+        "vulnerability": "High heat tolerance; vulnerable to heavy downpours at emergence."
+      },
+      {
+        "stage_id": "booting_heading",
+        "stage_name_en": "Booting & Heading",
+        "stage_name_mr": "कणीस बाहेर पडणे",
+        "stage_name_hi": "बाली निकलना",
+        "start_das": 40,
+        "end_das": 60,
+        "vulnerability": "Prolonged cloudy and rainy weather at flowering promotes ergot disease."
+      },
+      {
+        "stage_id": "grain_hardening_harvest",
+        "stage_name_en": "Grain Hardening & Harvest",
+        "stage_name_mr": "दाणे भरणे आणि काढणी",
+        "stage_name_hi": "दाना पकना एवं कटाई",
+        "start_das": 61,
+        "end_das": 90,
+        "vulnerability": "Requires dry weather for earhead desiccation."
+      }
+    ]
+  },
+  {
+    "crop_id": "wheat",
+    "common_name_en": "Wheat",
+    "common_name_mr": "गहू",
+    "common_name_hi": "गेहूं",
+    "botanical_name": "Triticum aestivum",
+    "crop_group": "Cereal",
+    "primary_season": "rabi",
+    "water_requirement_mm": "400 - 550",
+    "optimal_temp_c": "15 - 25",
+    "total_duration_days": 110,
+    "stages": [
+      {
+        "stage_id": "crown_root_tillering",
+        "stage_name_en": "Crown Root Initiation & Tillering",
+        "stage_name_mr": "मुकुट मुळे फुटणे आणि फुटवे",
+        "stage_name_hi": "ताज मूल एवं कल्ले निकलना",
+        "start_das": 0,
+        "end_das": 35,
+        "vulnerability": "Moisture deficit at CRI stage (DAS 21) reduces tillering by 40%."
+      },
+      {
+        "stage_id": "flowering_heading",
+        "stage_name_en": "Booting & Flowering",
+        "stage_name_mr": "लोंबी बाहेर पडणे आणि फुलोरा",
+        "stage_name_hi": "बाली निकलना एवं फूल आना",
+        "start_das": 50,
+        "end_das": 75,
+        "vulnerability": "High terminal heat (> 32°C) causes pollen sterility."
+      },
+      {
+        "stage_id": "milking_grain_filling",
+        "stage_name_en": "Milking & Dough / Maturity",
+        "stage_name_mr": "दाण्यात चीक भरणे आणि पक्वता",
+        "stage_name_hi": "दूधिया अवस्था एवं दाना भराव",
+        "start_das": 76,
+        "end_das": 115,
+        "vulnerability": "Terminal heat shock forces premature ripening, resulting in shriveled grains."
+      }
+    ]
+  },
+  {
+    "crop_id": "chickpea",
+    "common_name_en": "Chickpea (Gram / Chana)",
+    "common_name_mr": "हरभरा (चना)",
+    "common_name_hi": "चना",
+    "botanical_name": "Cicer arietinum",
+    "crop_group": "Pulses",
+    "primary_season": "rabi",
+    "water_requirement_mm": "250 - 350",
+    "optimal_temp_c": "18 - 28",
+    "total_duration_days": 105,
+    "stages": [
+      {
+        "stage_id": "emergence_branching",
+        "stage_name_en": "Emergence & Branching",
+        "stage_name_mr": "उगवण आणि फांद्या फुटणे",
+        "stage_name_hi": "अंकुरण एवं शाखाएं निकलना",
+        "start_das": 0,
+        "end_das": 35,
+        "vulnerability": "Requires residual soil moisture from late Kharif/monsoon retreat."
+      },
+      {
+        "stage_id": "flowering_pod_init",
+        "stage_name_en": "Flowering & Pod Initiation",
+        "stage_name_mr": "फुलधारणा आणि घाटे धरणे",
+        "stage_name_hi": "पुष्पन एवं घेंटी निर्माण",
+        "start_das": 45,
+        "end_das": 75,
+        "vulnerability": "Unseasonal rain or cloudy weather triggers pod borer (Helicoverpa) outbreaks and flower drop."
+      },
+      {
+        "stage_id": "pod_filling_maturity",
+        "stage_name_en": "Pod Filling & Ripening",
+        "stage_name_mr": "घाटे भरणे आणि पक्वता",
+        "stage_name_hi": "दाना भराव एवं पक्वता",
+        "start_das": 76,
+        "end_das": 110,
+        "vulnerability": "Susceptible to wilt under sudden temperature spikes in late February."
+      }
+    ]
+  },
+  {
+    "crop_id": "pigeonpea",
+    "common_name_en": "Pigeonpea (Tur / Arhar)",
+    "common_name_mr": "तूर (अरहर)",
+    "common_name_hi": "अरहर (तूर)",
+    "botanical_name": "Cajanus cajan",
+    "crop_group": "Pulses",
+    "primary_season": "kharif_extended",
+    "water_requirement_mm": "500 - 700",
+    "optimal_temp_c": "25 - 35",
+    "total_duration_days": 160,
+    "stages": [
+      {
+        "stage_id": "seedling_vegetative",
+        "stage_name_en": "Seedling & Early Vegetative",
+        "stage_name_mr": "रोपावस्था आणि शाकीय वाढ",
+        "stage_name_hi": "पौध एवं वानस्पतिक वृद्धि",
+        "start_das": 0,
+        "end_das": 60,
+        "vulnerability": "Slow initial growth; intercropped typically with soybean or cotton."
+      },
+      {
+        "stage_id": "flowering_pod_dev",
+        "stage_name_en": "Flowering & Pod Development",
+        "stage_name_mr": "फुलधारणा आणि शेंगा विकास",
+        "stage_name_hi": "फूल आना एवं फली विकास",
+        "start_das": 90,
+        "end_das": 135,
+        "vulnerability": "Coincides with monsoon withdrawal; relies on deep taproot and residual soil moisture."
+      },
+      {
+        "stage_id": "maturity_harvest",
+        "stage_name_en": "Pod Maturation & Harvest",
+        "stage_name_mr": "शेंगा भरणे आणि काढणी",
+        "stage_name_hi": "फली पकना एवं कटाई",
+        "start_das": 136,
+        "end_das": 175,
+        "vulnerability": "Cloudy weather in December causes severe pod borer infestation."
+      }
+    ]
+  },
+  {
+    "crop_id": "maize",
+    "common_name_en": "Maize (Corn)",
+    "common_name_mr": "मका",
+    "common_name_hi": "मक्का",
+    "botanical_name": "Zea mays",
+    "crop_group": "Cereal / Fodder",
+    "primary_season": "kharif_rabi",
+    "water_requirement_mm": "500 - 800",
+    "optimal_temp_c": "22 - 32",
+    "total_duration_days": 105,
+    "stages": [
+      {
+        "stage_id": "seedling_knee_high",
+        "stage_name_en": "Seedling to Knee-High",
+        "stage_name_mr": "उगवण आणि गुडघाभर वाढ",
+        "stage_name_hi": "अंकुरण से घुटने तक वृद्धि",
+        "start_das": 0,
+        "end_das": 35,
+        "vulnerability": "Cannot tolerate water stagnation; requires well-drained loam soils."
+      },
+      {
+        "stage_id": "tasseling_silking",
+        "stage_name_en": "Tasseling & Silking",
+        "stage_name_mr": "तुरा फुटणे आणि कणीस भरणे",
+        "stage_name_hi": "मंजरी एवं सिल्क निकलना",
+        "start_das": 45,
+        "end_das": 70,
+        "vulnerability": "Extremely moisture-sensitive window; heat > 38°C desiccates pollen silks."
+      },
+      {
+        "stage_id": "grain_filling_maturity",
+        "stage_name_en": "Dough & Maturity",
+        "stage_name_mr": "दाणे भरणे आणि पक्वता",
+        "stage_name_hi": "दाना भराव एवं पक्वता",
+        "start_das": 71,
+        "end_das": 110,
+        "vulnerability": "Requires warm, dry weather for cob dry-down."
+      }
+    ]
+  },
+  {
+    "crop_id": "sugarcane",
+    "common_name_en": "Sugarcane",
+    "common_name_mr": "ऊस",
+    "common_name_hi": "गन्ना",
+    "botanical_name": "Saccharum officinarum",
+    "crop_group": "Commercial / Cash Crop",
+    "primary_season": "annual_perennial",
+    "water_requirement_mm": "1800 - 2500",
+    "optimal_temp_c": "25 - 38",
+    "total_duration_days": 360,
+    "stages": [
+      {
+        "stage_id": "germination_formative",
+        "stage_name_en": "Germination & Formative Phase",
+        "stage_name_mr": "उगवण आणि कांडी फुटणे",
+        "stage_name_hi": "अंकुरण एवं प्रारंभिक अवस्था",
+        "start_das": 0,
+        "end_das": 120,
+        "vulnerability": "High water requirement for tiller formation."
+      },
+      {
+        "stage_id": "grand_growth",
+        "stage_name_en": "Grand Growth Phase",
+        "stage_name_mr": "मोठी वाढ आणि कांडी भरणे",
+        "stage_name_hi": "तीव्र वानस्पतिक वृद्धि",
+        "start_das": 121,
+        "end_das": 270,
+        "vulnerability": "Coincides with monsoon; prolonged dry spell reduces cane length and internode girth."
+      },
+      {
+        "stage_id": "ripening_maturity",
+        "stage_name_en": "Ripening & Harvesting",
+        "stage_name_mr": "साखर भरणे आणि तोडणी",
+        "stage_name_hi": "शर्करा निर्माण एवं कटाई",
+        "start_das": 271,
+        "end_das": 365,
+        "vulnerability": "Requires dry weather with cool nights for sucrose accumulation."
+      }
+    ]
+  }
+]

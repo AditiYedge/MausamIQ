@@ -1,0 +1,35 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend dependencies
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.vite/
+
+# Environment local secrets
+.env
+*.local
+
+# Database local stores
+*.sqlite3
+*.db
+backend/app/db/*.db
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
